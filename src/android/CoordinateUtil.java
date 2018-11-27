@@ -5,7 +5,6 @@ import java.math.BigDecimal;
 /**
  * 功能:提供坐标偏移公共类
  * 
- * @author 郭明阳
  * @date 2015/8/29
  */
 public class CoordinateUtil {
