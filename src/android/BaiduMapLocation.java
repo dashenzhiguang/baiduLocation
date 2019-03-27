@@ -56,14 +56,14 @@ public class BaiduMapLocation extends CordovaPlugin {
             try {
                 JSONObject json = new JSONObject();
                 
-                double[] wgs84Location = CoordinateUtil.GcjToWgs(location.getLatitude(), location.getLongitude());
+                double[] wgs84Location = CoordinateUtil.GcjToWgs(location.getLongitude(), location.getLatitude());
                 json.put("time", location.getTime());
                 json.put("locType", location.getLocType());
                 json.put("locTypeDescription", location.getLocTypeDescription());
                 json.put("latitude_gcj02", location.getLatitude());
                 json.put("longitude_gcj02", location.getLongitude());
-                json.put("latitude", wgs84Location[0]);
-                json.put("longitude", wgs84Location[1]);
+                json.put("latitude", wgs84Location[1]);
+                json.put("longitude", wgs84Location[0]);
                 json.put("radius", location.getRadius());
 
                 json.put("countryCode", location.getCountryCode());
